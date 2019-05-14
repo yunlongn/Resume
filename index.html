@@ -9,23 +9,6 @@
     <link rel="stylesheet" href="dist/css/style.min.css">
     <link rel="stylesheet" href="dist/css/fontello.min.css">
     <link rel="stylesheet" href="lib/zoom.css">
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-48084758-4', 'auto');
-        ga('send', 'pageview');
-
-    </script>
     <style>
         .bold{
             font-weight: bold;
@@ -116,23 +99,24 @@
                         </h4>
                         <p>聚合支付平台，集成微信封装成服务，提供给内部其他子系统进行调用， 为了保证支付接口的安全性， 使用令牌+验签+加密防止数据被篡改，
                             使用LCN框架实战解决SpringCloud微服务中分布式事物问题</p>
-                        <p>该项目架构采用分布式微服务架构，分为众多子系统，有会员、SSO、订单、商品、支付、消息、微信、H5和PC、移动端、优惠券、后台系统、任务调度等模块。</p>
-                        <p>公司使用 SpringBoot，SpringCloud作为微服务RPC远程调用框架 <br/>
-                            1、使用<span class="bold">Eureka</span> 作为注册中心<br/>
-                            2、<span class="bold">Feign</span> 客户端调用工具 解决服务雪崩效<br/>
-                            3、使用 <span class="bold">Rebbon</span> 实现服务负载均衡，<br/>
-                            4、服务降级使用断路器 <span class="bold">Hystrix</span> 、<br/>
+                        <p>该项目架构采用分布式微服务架构，分为多个子系统，有会员、SSO、订单、商品、支付、消息、微信、后台系统、任务调度等模块。 （将系统模块化拆分。）</p>
+                        <p>项目使用 SpringBoot，SpringCloud作为微服务RPC远程调用框架 <br/>
+                            1、使用<span class="bold">Eureka</span> 作为注册中心（该服务是让其他服务注册进来，起一个别名。然后服务直接调用的时候可以通过别名查找、Eureka 还会心跳检测注册进来的服务是否宕机。如果宕机了会将这个服务从注册中心删除）<br/>
+                            2、<span class="bold">Feign</span> 客户端调用工具 （Feign客户端是一个web声明式http远程调用工具、原理是使用动态代理的方式为目标服务上的接口生成了一个动态代理类。然后通过使用这个接口生成一个http模板、然后进行http请求返回目标数据）<br/>
+                            3、解决服务雪崩效应：使用 <span class="bold">Rebbon</span> 实现服务负载均衡，（ 原理是会将注册中心上面的注册的服务读取出来、然后再本地实现你设置的负载均衡策略。（当其他服务发送请求的时候。会带着请求的目标服务别名进入Rebbon 然后经过Rebbon 的负载均衡算法给出请求的目标地址给请求端 ））<br/>
+                            4、服务降级使用断路器 <span class="bold">Hystrix</span> <br/>
                             5、使用 <span class="bold">Zuul</span> 搭建接口网关、 <br/>
-                            6、视图展示使用 <span class="bold">Freemarker</span> 、<br/>
-                            7、数据库层使用 <span class="bold">Mybatis-plus</span> 框架、<br/>
-                            8、缓存使用 <span class="bold">Redis</span> 、<br/>
-                            9、数据库使用 <span class="bold">MySQL</span> ;<br/>
-                            10、项目管理工具使用 <span class="bold">Maven </span>、<br/>
-                            11、版本控制工具使用 <span class="bold">Git</span> 、<br/>
-                            12、消息中间件使用 <span class="bold">ActiveMQ </span>、<br/>
-                            13、分布式任务调度系统使用 <span class="bold">XXLJOB </span>、<br/>
-                            14、反向代理工具使用 <span class="bold">Nginx</span> ;<br/>
-                            15、项目自动部署工具使用 <span class="bold">Jenkins</span> 。</p>
+                            6、数据库层使用 <span class="bold">Mybatis-plus</span> 框架（一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变。简化代码。 提高CRUD的效率）<br/>
+                            7、缓存使用 <span class="bold">Redis</span> （一个nosql数据库、 这里简单的用来存储token、也可以用来实现分布式锁）<br/>
+                            8、消息中间件使用 <span class="bold">ActiveMQ </span><br/>
+                            9、项目自动部署工具使用 <span class="bold">Jenkins</span>（使用docker简单搭建了一个jenkins的自动部署项目的环境。将文件上传到gitlab中 通知jenkins系统 让他git checkout 项目  然后进行mvn clean package ； 然后执行运行脚本。实现自动化部署）<br/>
+                            10、视图展示使用 <span class="bold">Freemarker</span>（Freemarker （就是一个简单的模板引擎。实现严格的mvc分离））<br/>
+                            11、分布式任务调度系统使用 <span class="bold">XXLJOB </span>（一个中心控制cron的服务。将cron任务的触发放在这个服务，然后这个服务负责通知指定的服务来执行任务。 这个系统有很多种执行方式。例如你有同名的服务有多台。XXLJOB可以选择方式来进行任务的调度）<br/>
+                            12、数据库使用 <span class="bold">MySQL</span><br/>
+                            13、项目管理工具使用 <span class="bold">Maven </span><br/>
+                            14、版本控制工具使用 <span class="bold">Git</span> <br/>
+                            15、反向代理工具使用 <span class="bold">Nginx</span> <br/></p>
+
                     </li>
                     <li>
                         <div class="circle"></div>

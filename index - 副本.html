@@ -19,9 +19,7 @@
 <div class="container">
     <div class="sidebar">
         <div class="title">
-            <!--<img src="https://avatars2.githubusercontent.com/u/38271111" data-action="zoom">-->
             <img src="https://avatars2.githubusercontent.com/u/38271111" data-action="zoom">
-            <!--<img src="./img/lyl.jpg" data-action="zoom">-->
             <h1>李云龙的简历</h1>
             <h2>System.out.print("hello word")</h2>
         </div>
@@ -78,31 +76,7 @@
                         <p>使用到了<span class="bold">activeMq</span>做物业的每月物业费报表统计 （报表统计负责计算每月物业费 + 公摊费用）  </p>
                         <p>使用了<span class="bold">XXL-JOB</span> 做每月物业费报表的任务调度 </p>
                         <p>使用了<span class="bold">jenkins</span> 来做系统的自动化部署 </p>
-
-                        <p>使用到的技术难点就是每个月的物业费用报表计算。 需要精确到每一个用户的物业报表信息</p>
-                        <p>1. 每个月份到了某个一时间点的时候需要进行报表统计计算。 使用XXL-JOB可以随时更改报表计算时间和查询报表是否生成成功</p>
-                        <p>2. 报表需要计算每一户的物业费用以及加上公摊费用。然后大体上物业管理员需要查看某一栋的用户物业缴费情况。和没有缴费的名单。</p>
-                        <p>3. 管理员可以在后台添加一个公摊费用。让某一栋的用户或者整个小区的用户平摊这个费用。然后体现在用户的缴纳物业费的报表当中</p>
-                        <p>4. 在到了统计时间的时候。先将物业下面的所有小区寻找出来。然后每个小区开启一个线程去遍历每一个用户。做好异常的处理机制，保存好小区的id。然后计算用户的报表。
-                            将用户需要缴纳的费用保存到<span class="bold">ativeMq</span>。 <span class="bold">activeMq</span>的消费者判断这条缴纳数据生成的唯一id是否在数据库中存在。如果不存在执行保存数据的操作。
-                        消费者使用开启事务和手动签收模式 ，为了避免数据保存超时从而没有保存成功，activeMq拥有重试机制，当数据三次都没有保存成功的情况下
-                            将错误信息保存到<span class="bold">moongdb</span>中。由物业管理员查看错误原因并进行补偿</p>
-                    </li>
-                    <li>
-                        <div class="circle"></div>
-                        <h4>驾校管理系统</h4>
-                        <p>使用到了<span class="bold">SpringBoo</span>整合<span class="bold">SSM</span>来制作。该管理是自主与老板去跟驾校了解需求。
-                            他们需要一个微信公众号的在线报名和预约练车的系统。在线报名就是通话简单的信息收集。和微信支付。跟进学员的学车情况。微信登录和微信支付
-                            我在支付回调时候使用判断Referer判断是否为微信服务器的来源。防止有人伪装请求这个回调接口。 然后代码里面用订单支付状态来判断支付幂等性。从而进行支付成功逻辑。</p>
-                        <p>然后就是学车的约练。后台返回今天到未来七天的预约数据，系统后台设置每个教练一周每天可以预约的数量。然后让用户预约。在预约的接口中使用redis实现简单的分布式锁。
-                            让同一时间点击的用户只有一个通过逻辑代码预约成功。其他用户就返回一个服务繁忙的提示。避免数据脏读。前后台基本都由自己完成。前后端分离。前端是微信的H5页面，属于公众号开发。 </p>
-
-                        <p>项目使用ssm系统框架。该系统的主要作用是为了统计用户数据。让驾校减少纸质化的工作。</p>
-                        <p><span class="bold">技术点有</span></p>
-                        <p>1. 微信回调的确保数据安全和幂等性</p>
-                        <p>2. 在约练的时候，前端生成token提交保证避免数据的重复提交，然后后台使用了分布式锁来确保数据库数据不被脏读。避免出现预约只有20个名额但是21个人报名的这种情况。</p>
-                        <p>3. 统计某时间段的用户报名数据形成报表、统计用户缴费情况的报表。</p>
-                        <p>4. 用户的权限管理是自己之前写的权限管理框架。 每个用户就像树状节点一样。只能看到自己或者自己子节点的用户信息</p>
+                        <img src="./img/wuye.jpg" data-action="zoom" width="250px">
                     </li>
                     <!--<li>-->
                         <!--<div class="circle"></div>-->
@@ -117,14 +91,13 @@
                     <li>
                         <div class="circle"></div>
                         <h4>
-                            <span>SpringCloud-微服务商城（个人搭建项目）</span>
+                            <span>基于SpringCloud的微服务商城 - 聚合支付平台</span>
                             <!--<a href="https://github.com/DIYgod/APlayer" target="_blank"><i class="icon-link"></i>源代码</a>-->
                             <!--<a href="https://aplayer.js.org/" target="_blank"><i class="icon-link"></i>Demo</a>-->
                             <!--<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=APlayer&type=star&count=true"-->
                                     <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
                         </h4>
-                        <p>这是一个自己参照微服务框架的写的一个简单基于SpringCloud 的微服务商城。
-                            将微信支付封装成服务，提供给内部其他子系统进行调用， 为了保证支付接口的安全性， 使用令牌+验签+加密防止数据被篡改，
+                        <p>聚合支付平台，集成微信封装成服务，提供给内部其他子系统进行调用， 为了保证支付接口的安全性， 使用令牌+验签+加密防止数据被篡改，
                             使用LCN框架实战解决SpringCloud微服务中分布式事物问题</p>
                         <p>该项目架构采用分布式微服务架构，分为多个子系统，有会员、SSO、订单、商品、支付、消息、微信、后台系统、任务调度等模块。 （将系统模块化拆分。）</p>
                         <p>项目使用 SpringBoot，SpringCloud作为微服务RPC远程调用框架 <br/>
@@ -145,61 +118,61 @@
                             15、反向代理工具使用 <span class="bold">Nginx</span> <br/></p>
 
                     </li>
-                    <!--<li>-->
-                        <!--<div class="circle"></div>-->
-                        <!--<h4>-->
-                            <!--<span>基于SpringCloud的微服务商城-微信公众平台开发</span>-->
-                            <!--&lt;!&ndash;<a href="https://github.com/DIYgod/DPlayer" target="_blank"><i class="icon-link"></i>源代码</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="http://dplayer.js.org/" target="_blank"><i class="icon-link"></i>Demo</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=DPlayer&type=star&count=true"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;frameborder="0" scrolling="0" width="170px" height="20px"></iframe>&ndash;&gt;-->
-                        <!--</h4>-->
-                        <!--<p>SpringCloud的微服务商城，是基于微信平台流量作为入口导向。-->
-                            <!--整合微信开发接口，用户与该微信公众号进行关联绑定，实现用户快捷、方便、安全购物体验。-->
-                            <!--该项目采用微服务系统架构，分为微信服务接口和微信后台管理系统，-->
-                            <!--使用微信框架 <span class="bold">weixin-java-tools</span>,-->
-                            <!--使用外网映射工具 <span class="bold">ngrok</span>，-->
-                            <!--封装常用<span class="bold">微信API接口</span>                            ，-->
-                            <!--消息管理、<span class="bold">网页授权OAuth2.0</span>、-->
-                            <!--素材管理、用户管理等封装成接口给其他子系统调用。 </p>-->
-                        <!--&lt;!&ndash;<img src="https://diygod.b0.upaiyun.com/resume-dplayer.jpg" data-action="zoom" width="300px">&ndash;&gt;-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="circle"></div>-->
-                        <!--<h4>-->
-                            <!--<span>基于SpringCloud的微服务商城-消息中台服务项目</span>-->
-                            <!--&lt;!&ndash;<a href="https://github.com/DIYgod/DPlayer" target="_blank"><i class="icon-link"></i>源代码</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="http://dplayer.js.org/" target="_blank"><i class="icon-link"></i>Demo</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=DPlayer&type=star&count=true"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;frameborder="0" scrolling="0" width="170px" height="20px"></iframe>&ndash;&gt;-->
-                        <!--</h4>-->
-                        <!--<p>该项目是单独的一个服务和后台项目-消息服务系统，-->
-                            <!--集成了常用消息网关接口，-->
-                            <!--阿里云大于短信网关，-->
-                            <!--微信消息推送，邮件服务等。-->
-                            <!--封装成服务接口，提供给内部其他子系统进行调用，-->
-                            <!--服务接口支持同步和异步方式调用，-->
-                            <!--同步调用接口协议采用<span class="bold">Http+JSON</span>格式、-->
-                            <!--异步调用方式采用MQ+自定义报文格式。-->
-                            <!--使用<span class="bold">分布式job</span>每晚定时检查异常发送消息，如果发送异常，有消息补偿机制。</p>-->
-                        <!--&lt;!&ndash;<img src="https://diygod.b0.upaiyun.com/resume-dplayer.jpg" data-action="zoom" width="300px">&ndash;&gt;-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="circle"></div>-->
-                        <!--<h4>-->
-                            <!--<span>基于SpringCloud的微服务商城-会员中台项目</span>-->
-                            <!--&lt;!&ndash;<a href="https://github.com/DIYgod/Resume" target="_blank"><i class="icon-link"></i>源代码</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=Resume&type=star&count=true"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;frameborder="0" scrolling="0" width="170px" height="20px"></iframe>&ndash;&gt;-->
-                        <!--</h4>-->
-                        <!--<p>该项目是蚂蚁微信商城核心模块，-->
-                            <!--会员中台项目，会员中台项目分为，-->
-                            <!--会员服务接口和会员后台管理系统，-->
-                            <!--会员服务接口会话认证，-->
-                            <!--采用有效期<span class="bold">token令牌</span>方式，-->
-                            <!--进行验证， 实现登录支持整个系统的移动端、微信端、PC端、H5端来源请求。-->
-                            <!--来源调用注册服务接口，注册成功后，调用异步消息接口进行新用户提醒。。</p>-->
-                    <!--</li>-->
+                    <li>
+                        <div class="circle"></div>
+                        <h4>
+                            <span>基于SpringCloud的微服务商城-微信公众平台开发</span>
+                            <!--<a href="https://github.com/DIYgod/DPlayer" target="_blank"><i class="icon-link"></i>源代码</a>-->
+                            <!--<a href="http://dplayer.js.org/" target="_blank"><i class="icon-link"></i>Demo</a>-->
+                            <!--<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=DPlayer&type=star&count=true"-->
+                                    <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
+                        </h4>
+                        <p>SpringCloud的微服务商城，是基于微信平台流量作为入口导向。
+                            整合微信开发接口，用户与该微信公众号进行关联绑定，实现用户快捷、方便、安全购物体验。
+                            该项目采用微服务系统架构，分为微信服务接口和微信后台管理系统，
+                            使用微信框架 <span class="bold">weixin-java-tools</span>,
+                            使用外网映射工具 <span class="bold">ngrok</span>，
+                            封装常用<span class="bold">微信API接口</span>                            ，
+                            消息管理、<span class="bold">网页授权OAuth2.0</span>、
+                            素材管理、用户管理等封装成接口给其他子系统调用。 </p>
+                        <!--<img src="https://diygod.b0.upaiyun.com/resume-dplayer.jpg" data-action="zoom" width="300px">-->
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>
+                            <span>基于SpringCloud的微服务商城-消息中台服务项目</span>
+                            <!--<a href="https://github.com/DIYgod/DPlayer" target="_blank"><i class="icon-link"></i>源代码</a>-->
+                            <!--<a href="http://dplayer.js.org/" target="_blank"><i class="icon-link"></i>Demo</a>-->
+                            <!--<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=DPlayer&type=star&count=true"-->
+                                    <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
+                        </h4>
+                        <p>该项目是单独的一个服务和后台项目-消息服务系统，
+                            集成了常用消息网关接口，
+                            阿里云大于短信网关，
+                            微信消息推送，邮件服务等。
+                            封装成服务接口，提供给内部其他子系统进行调用，
+                            服务接口支持同步和异步方式调用，
+                            同步调用接口协议采用<span class="bold">Http+JSON</span>格式、
+                            异步调用方式采用MQ+自定义报文格式。
+                            使用<span class="bold">分布式job</span>每晚定时检查异常发送消息，如果发送异常，有消息补偿机制。</p>
+                        <!--<img src="https://diygod.b0.upaiyun.com/resume-dplayer.jpg" data-action="zoom" width="300px">-->
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>
+                            <span>基于SpringCloud的微服务商城-会员中台项目</span>
+                            <!--<a href="https://github.com/DIYgod/Resume" target="_blank"><i class="icon-link"></i>源代码</a>-->
+                            <!--<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=Resume&type=star&count=true"-->
+                                    <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
+                        </h4>
+                        <p>该项目是蚂蚁微信商城核心模块，
+                            会员中台项目，会员中台项目分为，
+                            会员服务接口和会员后台管理系统，
+                            会员服务接口会话认证，
+                            采用有效期<span class="bold">token令牌</span>方式，
+                            进行验证， 实现登录支持整个系统的移动端、微信端、PC端、H5端来源请求。
+                            来源调用注册服务接口，注册成功后，调用异步消息接口进行新用户提醒。。</p>
+                    </li>
                     <li>
                         <div class="circle"></div>
                         <h4>
@@ -216,28 +189,6 @@
                         <!--</p>-->
                         <img src="./img/权限管理系统.png" data-action="zoom"
                              width="600px">
-                    </li><li>
-                        <div class="circle"></div>
-                        <h4>
-                            <span>微信商城小程序开发</span>
-                            <!--<a href="https://github.com/DIYgod/Amativeness" target="_blank"><i class="icon-link"></i>源代码</a>-->
-                            <!--<a href="https://www.anotherhome.net" target="_blank"><i class="icon-link"></i>Site</a>-->
-                            <!--<iframe src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=Amativeness&type=star&count=true"-->
-                                    <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
-                        </h4>
-                        <!--<p>-->
-                    <p><span class="bold">在大学期间给别人做的一个小商城</span></p>
-                        <p>小程序做到了以下功能（搜索兰茜玲护肤即可找到该小程序）</p>
-                        <p>1、商品页面：完善详尽的商品展示页面，可以让消费者迅速找到自己心仪的商品。</p>
-                        <p>2、微信对接：小程序使用oauth2登录后台程序，对应登录角色</p>
-                        <p>3、搜索：通过搜索，快速发现自己想要的。</p>
-                        <p>4、购物车：在下单之后，通过购物车对商品进行再次的筛选。</p>
-                        <p>5、在线支付：支持微信支付、支付宝支付，方便快捷。</p>
-                        <p>6、转发分享：对商品的资讯、产品等可以进行转发、分享等。</p>
-                        <p>7、微信支付：查阅了许多资料，完善了支付功能，可以直接在小程序上进行支付</p>
-                        <p>8、评论互动：收到商品后，大家可以对商品进行评论。</p>
-                        <p>9、在线客服：用户可以与商家客服进行详细沟通。</p>
-                        <p>10、前后端使用json进行数据传输</p>
                     </li>
                 </ul>
             </li>

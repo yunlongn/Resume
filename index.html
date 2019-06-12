@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>java后端工程师+李云龙+13539136450</title>
-    <meta name="description" content="我是一个充满活力、对java由衷热爱、善于发现问题的前端工程师。我目前正在寻找java后端工程师岗位，希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！">
+    <meta name="description" content="我是一个充满活力、对java由衷热爱、善于发现问题的Java工程师。我目前正在寻找java后端工程师岗位，希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！">
     <meta name="keywords" content="yunlongn,java后端,工作,简历">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="dist/css/style.min.css">
@@ -57,9 +57,10 @@
                 <dd><strong>毕业院校:</strong> <span>河源职业技术学院</span></dd>
                 <dd><strong>工作年限:</strong> <span>一年</span></dd>
                 <dd><strong>常用ID:</strong> <span>yunlongn</span></dd>
-                <dd><strong>博客:</strong> <a href="http://www.ityouknow.cn:4000/" target="_blank">www.ityouknow.cn</a>
+                <dd><strong>博客:</strong> <a href="http://www.ityouknow.cn:4000/" target="_blank">www.ityouknow.cn<i class="icon-link"></i></a>
+                <dd><strong>关于我:</strong> <a href="http://www.ityouknow.cn:4000/about" target="_blank">我的一些介绍<i class="icon-link"></i></a>
                 </dd>
-                <dd><strong>GitHub:</strong> <a href="https://www.github.com/yunlong" target="_blank">www.github.com/yunlong</a>
+                <dd><strong>GitHub:</strong> <a href="https://www.github.com/yunlongn" target="_blank">www.github.com/yunlongn<i class="icon-link"></i></a>
                     <!--<iframe src="https://ghbtns.com/github-btn.html?user=yunlongn&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
                 </dd>
             </li>
@@ -73,20 +74,23 @@
                     <li>
                         <div class="circle"></div>
                         <h4>小爱物业管理系统</h4>
-                        <p>以物业管理系统的后台为主要开发工作，项目采用 SpringBoot 的基础框架，使用 <span class="bold">SpringMVC、Spring、Mybatis-plus</span>进行物业系统的Crud操作</p>
+                        <p>项目采用 SpringBoot 的基础框架，使用 <span class="bold">SpringMVC、Spring、Mybatis-plus</span>进行物业系统的Crud操作</p>
                         <p>权限管理是使用拦截器为基础自己搭建的RBAC权限管理框架。</p>
                         <p>使用到了<span class="bold">activeMq</span>做物业的每月物业费报表统计 （报表统计负责计算每月物业费 + 公摊费用）  </p>
                         <p>使用了<span class="bold">XXL-JOB</span> 做每月物业费报表的任务调度 </p>
                         <p>使用了<span class="bold">jenkins</span> 来做系统的自动化部署 </p>
-
-                        <p>使用到的技术难点就是每个月的物业费用报表计算。 需要精确到每一个用户的物业报表信息</p>
+                        <p>技术难点就是每个月的物业费用报表计算。 需要精确到每一个用户的物业报表信息</p>
                         <p>1. 每个月份到了某个一时间点的时候需要进行报表统计计算。 使用XXL-JOB可以随时更改报表计算时间和查询报表是否生成成功</p>
                         <p>2. 报表需要计算每一户的物业费用以及加上公摊费用。然后大体上物业管理员需要查看某一栋的用户物业缴费情况。和没有缴费的名单。</p>
                         <p>3. 管理员可以在后台添加一个公摊费用。让某一栋的用户或者整个小区的用户平摊这个费用。然后体现在用户的缴纳物业费的报表当中</p>
-                        <p>4. 在到了统计时间的时候。先将物业下面的所有小区寻找出来。然后每个小区开启一个线程去遍历每一个用户。做好异常的处理机制，保存好小区的id。然后计算用户的报表。
-                            将用户需要缴纳的费用保存到<span class="bold">ativeMq</span>。 <span class="bold">activeMq</span>的消费者判断这条缴纳数据生成的唯一id是否在数据库中存在。如果不存在执行保存数据的操作。
-                        消费者使用开启事务和手动签收模式 ，为了避免数据保存超时从而没有保存成功，activeMq拥有重试机制，当数据三次都没有保存成功的情况下
+                        <p><span class="bold" style="color: black;"> 我做的一些事情: </span></p>
+                        <p>1. 在服务器中搭建了<span class="bold">activeMq</span></p>
+                        <p>2. 在到了统计时间的时候。先将物业下面的所有小区寻找出来。然后每个小区开启一个线程去遍历每一个用户。做好异常的处理机制，保存好小区的id。然后计算用户的报表。
+                            将用户需要缴纳的费用保存到<span class="bold">activeMq</span>。 <span class="bold">activeMq</span>的消费者判断这条缴纳数据生成的唯一id是否在数据库中存在。如果不存在执行保存数据的操作。
+                            消费者使用开启事务和手动签收模式 ，为了避免数据保存超时从而没有保存成功，activeMq拥有重试机制，当数据三次都没有保存成功的情况下
                             将错误信息保存到<span class="bold">moongdb</span>中。由物业管理员查看错误原因并进行补偿</p>
+                        <p>3. 在服务器中搭建<span class="bold">XXL-JOB</span> 并且编写了启动公摊费统计的代码</p>
+                        <p>4. 将<span class="bold">jenkins</span>使用docker搭建在服务器中。然后使用GitLab作为仓库。配置好Maven。然后合并分支的时候就会自动部署项目</p>
                     </li>
                     <li>
                         <div class="circle"></div>
@@ -123,9 +127,10 @@
                             <!--<iframe style="width: 100px;" src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=APlayer&type=star&count=true"-->
                                     <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
                         </h4>
-                        <p>这是一个自己参照微服务框架的写的一个简单基于SpringCloud 的微服务商城。
+                        <p>该项目让我了解到的微服务是什么。如何使用。</p>
+                        <p>这是一个自己参照微服务框架的写的一个简单基于SpringCloud的微服务小商城。
                             将微信支付封装成服务，提供给内部其他子系统进行调用， 为了保证支付接口的安全性， 使用令牌+验签+加密防止数据被篡改，
-                            使用LCN框架实战解决SpringCloud微服务中分布式事物问题</p>
+                            使用LCN框架实战解决SpringCloud微服务中分布式事物问题， 并没有完全完成。 </p>
                         <p>该项目架构采用分布式微服务架构，分为多个子系统，有会员、SSO、订单、商品、支付、消息、微信、后台系统、任务调度等模块。 （将系统模块化拆分。）</p>
                         <p>项目使用 SpringBoot，SpringCloud作为微服务RPC远程调用框架 <br/>
                             1、使用<span class="bold">Eureka</span> 作为注册中心（该服务是让其他服务注册进来，起一个别名。然后服务直接调用的时候可以通过别名查找、Eureka 还会心跳检测注册进来的服务是否宕机。如果宕机了会将这个服务从注册中心删除）<br/>
@@ -137,12 +142,11 @@
                             7、缓存使用 <span class="bold">Redis</span> （一个nosql数据库、 这里简单的用来存储token、也可以用来实现分布式锁）<br/>
                             8、消息中间件使用 <span class="bold">ActiveMQ </span>(ActiveMQ （因为服务器就只有一个 所以使用这个消息队列。这个消息队列可以保证消费的ID的幂等性）)<br/>
                             9、项目自动部署工具使用 <span class="bold">Jenkins</span>（使用docker简单搭建了一个jenkins的自动部署项目的环境。将文件上传到gitlab中 通知jenkins系统 让他git checkout 项目  然后进行mvn clean package ； 然后执行运行脚本。实现自动化部署）<br/>
-                            10、视图展示使用 <span class="bold">Freemarker</span>（Freemarker （就是一个简单的模板引擎。实现严格的mvc分离））<br/>
-                            11、分布式任务调度系统使用 <span class="bold">XXLJOB </span>（一个中心控制cron的服务。将cron任务的触发放在这个服务，然后这个服务负责通知指定的服务来执行任务。 这个系统有很多种执行方式。例如你有同名的服务有多台。XXLJOB可以选择方式来进行任务的调度）<br/>
-                            12、数据库使用 <span class="bold">MySQL</span><br/>
-                            13、项目管理工具使用 <span class="bold">Maven </span><br/>
-                            14、版本控制工具使用 <span class="bold">Git</span> <br/>
-                            15、反向代理工具使用 <span class="bold">Nginx</span> <br/></p>
+                            10、分布式任务调度系统使用 <span class="bold">XXLJOB </span>（一个中心控制cron的服务。将cron任务的触发放在这个服务，然后这个服务负责通知指定的服务来执行任务。 这个系统有很多种执行方式。例如你有同名的服务有多台。XXLJOB可以选择方式来进行任务的调度）<br/>
+                            11、数据库使用 <span class="bold">MySQL</span><br/>
+                            12、项目管理工具使用 <span class="bold">Maven </span><br/>
+                            13、版本控制工具使用 <span class="bold">Git</span> <br/>
+                            14、反向代理工具使用 <span class="bold">Nginx</span> <br/></p>
 
                     </li>
                     <!--<li>-->
@@ -232,7 +236,7 @@
                         <p>2、微信对接：小程序使用oauth2登录后台程序，对应登录角色</p>
                         <p>3、搜索：通过搜索，快速发现自己想要的。</p>
                         <p>4、购物车：在下单之后，通过购物车对商品进行再次的筛选。</p>
-                        <p>5、在线支付：支持微信支付、支付宝支付，方便快捷。</p>
+                        <p>5、在线支付：支持微信支付。方便快捷。</p>
                         <p>6、转发分享：对商品的资讯、产品等可以进行转发、分享等。</p>
                         <p>7、微信支付：查阅了许多资料，完善了支付功能，可以直接在小程序上进行支付</p>
                         <p>8、评论互动：收到商品后，大家可以对商品进行评论。</p>
@@ -269,26 +273,35 @@
                     <li>
                         <div class="circle"></div>
                         <h4>Java</h4>
-                        <p>1.熟练掌握JavaSE基础知识，熟悉多线程与并发编程，拥有丰富的系统设计分析能力及面向对象分析和设计能力，熟悉常用的设计模式；</p>
+                        <p></p>
+                        <p>1.熟练掌握JavaSE基础知识、看过HashMap、ArrayList源码。了解底层实现原理</p>
                         <p>2.熟练掌握Eclipse、svn、git、Maven、docker等开发及版本控制工具，熟练掌握Java基础技术Jsp、Servlet、Jdbc，熟练掌握Web应用系统开发，具备的独立开发能力；</p>
-                        <p>5.熟练使用tomcat服务器，发布部署web项目，熟练使用反向代理服务器nginx、高可用keepalived；</p>
-                        <p>6.熟悉使用MySQL、，熟悉Redis、MongoDb等非关系型数据库；</p>
-                        <p>7.熟练运用Spring、Mybatis、Springboot等开源框架，熟悉Spring的IOC、DI、AOP设计思想；</p>
-                        <p>8.了解SOA、微服务、大型网站架构，了解RPC远程调用、springcloud等微服务框架；</p>
-                        <p>9.熟练使用网络通讯协议，熟练使用json、xml通讯格式，熟悉常见消息中间件ActiveMQ、RocketMQ、 使用；</p>
-                        <p>10.熟悉restfull API开发规范，熟悉三方授权OAuth协议、对接支付接口，熟悉微信开发；</p>
-                        <p>11.熟悉分布式协调工具Zookeeper、集群、高可用、高并发解决方案，熟悉分布式常见解决方案（如：分布式job幂等性、session共享、分布式锁、分布式事物等）；</p>
-                        <p>12.熟悉junit单元测试</p>
-                        <p>13.了解Web 安全与反攻，简单防止 DDOC、XSS、CSRF等；</p>
+                        <p>3.熟悉使用MySQL、Redis、MongoDb数据库；</p>
+                        <p>4.熟练运用Spring、Mybatis、Springboot等开源框架，熟悉Spring的IOC、DI、AOP设计思想；</p>
+                        <p>5.熟练使用网络通讯协议，熟练使用json、xml通讯格式，熟悉常见消息中间件ActiveMQ、RocketMQ使用；</p>
+                        <p>6.熟悉restfull API开发规范，熟悉三方授权OAuth协议、对接支付接口，熟悉微信开发；</p>
+                        <!--<p>7.了解过Zookeeper、集群、高可用、高并发解决方案，熟悉分布式常见解决方案（如：分布式job幂等性、session共享、分布式锁、分布式事物等）；</p>-->
                     </li>
                 </ul>
                 <h3>其他属性</h3>
                 <ul class="exp">
                     <li>
                         <p>动漫、美剧爱好者</p>
-                        <p>轻微强迫症，注意<a href="https://github.com/alibaba/p3c" target="_blank"> 阿里巴巴Java开发手册</a></p>
+                        <p>轻微强迫症，注重<a href="https://github.com/alibaba/p3c" target="_blank"> 阿里巴巴Java开发手册</a></p>
                         <!--<p>猫咪铲屎官，拥有一只叫酸奶的美短猫，她的博客在<a href="https://suannai.cat/" target="_blank">这里</a></p>-->
                     </li>
+                </ul>
+                <h3>看过的书籍</h3>
+                <ul class="exp">
+                    <li>1、Head First Java（第二版）</li>
+                    <li>2、Head First设计模式</li>
+                    <li>3、像计算机科学家一样思考 Java</li>
+                    <li>4、高性能 MySQL（第 3 版）</li>
+                    <li>5、Spring Boot 揭秘</li>
+                    <li>6、数据库索引设计与优化</li>
+                    <li>7、阿里巴巴Java开发手册</li>
+                    <li>8、疯狂Java讲义（第4版）</li>
+                    <li>9、MySQL 性能调优与架构设计</li>
                 </ul>
             </li>
         </ul>

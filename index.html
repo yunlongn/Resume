@@ -47,7 +47,7 @@
                     <dd><strong>学历:</strong> <span>大专</span></dd>
                     <dd><strong>常用ID:</strong> <span>yunlongn</span></dd>
                     <dd><strong>博客园:</strong> <a href="https://www.cnblogs.com/yunlongn/" target="_blank">https://www.cnblogs.com/yunlongn/<i class="icon-link"></i></a>
-                    <dd><strong>博客:</strong> <a href="http://39.108.223.129:8080/" target="_blank">http://39.108.223.129:8080/<i class="icon-link"></i></a>
+                    <dd><strong>个人网站:</strong> <a href="http://yunlongn.gitee.io/" target="_blank">http://yunlongn.gitee.io/<i class="icon-link"></i></a>
                         <!--<dd><strong>关于我:</strong> <a href="http://www.ityouknow.cn:4000/about" target="_blank">我的一些介绍<i class="icon-link"></i></a>-->
                     </dd>
                     <dd><strong>GitHub:</strong> <a href="https://www.github.com/yunlongn" target="_blank">www.github.com/yunlongn<i class="icon-link"></i></a>
@@ -59,11 +59,11 @@
                     <dd><i class="icon-phone-1"></i>电话: 13539136450</dd>
                     <dd><i class="icon-mail-alt"></i>邮箱: <a href="mailto:i@html.love" target="_blank">763506525@qq.com</a>
                     </dd>
-                    <dd><i class="icon-wechat"></i>微信: <a href="mailto:i@html.love" target="_blank">yunlongn</a>
-                    </dd>
+                   <!--  <dd><i class="icon-wechat"></i>微信: <a href="mailto:i@html.love" target="_blank">yunlongn</a>
+                    </dd> -->
                     <!--<dd><i class="icon-wechat"></i>微信: yunlongn</dd>-->
-                    <dd><i class="icon-qq"></i>QQ: <a href="http://wpa.qq.com/msgrd?v=3&uin=306578968&site=qq&menu=yes"
-                                                      target="_blank">763506525</a></dd>
+                   <!--  <dd><i class="icon-qq"></i>QQ: <a href="http://wpa.qq.com/msgrd?v=3&uin=306578968&site=qq&menu=yes"
+                                                      target="_blank">763506525</a></dd> -->
                 </li>
             </ul>
         </div>
@@ -74,16 +74,39 @@
         <ul class="main-info">
             <li class="someRight about" >
                 <dt><i class="icon-bookmark"></i>About. 自我介绍</dt>
-                <p > 主导对接过许多知名金融机构，现担任过项目开发组长，非常熟练项目部署项目以及业务开发。熟悉Spring MVC、Spring、Mybatis-plus、Shiro熟悉三方授权OAuth协议、对接支付系统，熟悉微信开发文档。熟悉Centos系统。有自建 docker、jenkins、sonar 等平台搭建。有丰富的金融机构对接经验，交易对接经验。</p>
+                <p >主导对接过许多知名金融机构，现担任过项目开发组长，非常熟练项目部署项目以及业务开发。熟悉Spring MVC、Spring、Mybatis-plus、Shiro熟悉三方授权OAuth协议、对接支付系统，熟悉微信开发文档。熟悉Centos系统。有自建 docker、jenkins、sonar 等平台搭建。有丰富的金融机构对接经验，交易对接经验。</p>
+                <p >学习过  <span class="bold"> JVM调优</span>，能使用阿里 <span class="bold"> Arthas </span>解决生产问题</p>
+        
                 <p >具有良好的学习和适应能力，能快速的融入新环境；</p>
                 <p >做事认真负责、沉着冷静，倾向于从可观的角度分析问题；</p>
-                <p >有集体荣誉感，能够合理的处理周围人际关系；</p>
-                <p >希望做一个能给团队带来帮助的人！</p>
             </li>
             <li>
                 <dt><i class="icon-bookmark"></i>Project. 项目</dt>
 
                 <ul class="exp">
+                    <li>
+                        <div class="circle"></div>
+                        <h4>智能储钱罐项目 toc 微服务版（2020.10-2021）</h4>
+                        <p>项目采用 <span class="bold">Spring-Cloud-Alibaba </span>框架，
+                            基于智能存钱罐单体项目重新开发，梳理新需求，系统涵盖： <span class="bold">教师端，儿童端，硬件端</span></p>
+                        <p>项目技术栈有：
+                            <span class="bold">SpringMVC、Spring、Mybatis-plus、Nacos 、Seata(AT模式)、Feign、Sentinel 、Gateway、
+                                链路追踪（skywalking）、系统监控 （Grafana、Prometheus）、调度中心（XXL-JOB）、阿里云日志收集（SLS）、 Jenkins</span>自动部署</p>
+                        <p><span class="bold">使用Shiro做为权限管理框架，JWT作为身份认证Token</span> </p>
+                        <p>背景：智能存钱罐是无现金时代儿童财商教育的好帮手，让孩子对金钱的感知更有型，更便捷拥有新西兰ABS银行官方授权。
+                            项目背景主要手机端与硬件段交互，实现互动关系。<span class="bold">主要客户端有移动端，教师端，硬件端; 由
+                            微信授权、活动模块、首页商城、儿童课程、儿童计划、儿童金融、安全和授权 七个模块组成</span></p>
+                        <p>负责事项： </p>
+                        <p>1、参与制定分布式框架选型，编写demo例子。</p>
+                        <p>2、微信小程序身份认证，返回对应的Token信息。 将身份信息存入token。
+                            编写请求拦截器。将身份信息从redis读取存入 ThreadLocal中</p>
+<!--                        <p>3、监控JVM的状态。 计算业务量。判断每台机器能够承受的并发量</p>-->
+                        <p>3、编写项目开发文档，以及通用模块的介绍</p>
+                        <p>4、研读需求文档，探讨数据字段，冗余字段，索引添加的最佳方案。</p>
+                        <p>5、代码的Review的参加, 数据库语句的 explain 执行分析, 是否使用索引。</p>
+                        <p>6、编写jenkins自动部署脚本</p>
+
+                    </li>
                     <li>
                         <div class="circle"></div>
                         <h4>智能储钱罐项目（2019-2021）</h4>
@@ -107,7 +130,7 @@
                         <p class="bold">在岗位主要职责：</p>
                         <p>0、在项目中为 <span class="bold"> 项目上线实施指导、远程指导生产排查错误、代码研发开发 </span>的主要人员</p>
                         <p>1、参与一期从零开发。实现<span class="bold"> 全国 </span>多地部署上线</p>
-                        <p>2、项目部署环境有 <span class="bold">Oracle、Mysql、OceanBase</span></p>
+                        <p>2、在项目中接触过数据库有 <span class="bold">Oracle、Mysql、OceanBase</span></p>
                         <p>3、与多家金融机构、进行接口对接，完成联调，进行上线</p>
                         <p>4、各大金融机构 部署的环境变化情况复杂。能自己理解完成项目架构变化，完成上线</p>
                         <p>5、根据不同的金融环境，进行了：<span class="bold">docker+k8s 进行云部署、 实体物理机上线、 虚拟机环境上线</span> </p>
@@ -123,24 +146,23 @@
                             项目实施过程中遇到的问题，我这边负责远程提供一些思路以及援助</p>
                         <p>5、与许多金融机构合作，开发重复接口。我将项目完善成了开箱即用的一个项目</p>
                     </li>
-                    <li>
-                        <div class="circle"></div>
-                        <h4>小爱社区服务系统（2018-2019）</h4>
-                        <p>项目原本采用 <span class="bold">SpringBoot </span>框架，<span class="bold">在我加入公司之后进行了升级改造 基于SpringCloud改造开发</span></p>
-                        <p>项目技术栈有：
-                            <span class="bold">SpringMVC、Spring、Mybatis-plus、LCN 、Eureka、Feign 、Rebbon、Hystrix 、Gateway、Jenkins</span>自动部署</p>
-                        <p>权限管理是基于<span class="bold">RBAC模型，实现的权限管理系统。</span></p>
-                        <p>背景：为几个社区，不同的物业公司之下的居民用户提供便捷的社区服务</p>
-                        <p>负责的模块有： </p>
-                        <p>1、计算不同物业下面的<span class="bold">每户居民物业费用统计</span></p>
-                        <p>用到的技术栈有：<span class="bold">RocketMQ、XXL-JOB</span>  </p>
-                        <p>2、熟练运用<span class="bold">微信api</span>，进行用户的登陆，与支付</p>
-                        <p>3、熟练使用<span class="bold">阿里云OSS</span>进行用户文件数据存储</p>
-                        <p>4、居民的公物报修上传与后台维护功能</p>
-                        <p>5、POI 框架工具实现excel、pdf 文档处理，数据导入导出。</p>
-                        <p>6、ECharts 数据图表展示等。</p>
-
-                    </li>
+<!--                    <li>-->
+<!--                        <div class="circle"></div>-->
+<!--                        <h4>小爱社区服务系统（2018-2019）</h4>-->
+<!--                        <p>项目原本采用 <span class="bold">SpringBoot </span>框架，<span class="bold">在我加入公司之后进行了升级改造 基于SpringCloud改造开发</span></p>-->
+<!--                        <p>项目技术栈有：-->
+<!--                            <span class="bold">SpringMVC、Spring、Mybatis-plus、LCN 、Eureka、Feign 、Ribbon、Hystrix 、Gateway、Jenkins</span>自动部署</p>-->
+<!--                        <p>权限管理是基于<span class="bold">RBAC模型，实现的权限管理系统。</span></p>-->
+<!--                        <p>背景：为几个社区，不同的物业公司之下的居民用户提供便捷的社区服务</p>-->
+<!--                        <p>负责的模块有： </p>-->
+<!--                        <p>1、计算不同物业下面的<span class="bold">每户居民物业费用统计</span></p>-->
+<!--                        <p>用到的技术栈有：<span class="bold">RocketMQ、XXL-JOB</span>  </p>-->
+<!--                        <p>2、熟练运用<span class="bold">微信api</span>，进行用户的登陆，与支付</p>-->
+<!--                        <p>3、熟练使用<span class="bold">阿里云OSS</span>进行用户文件数据存储</p>-->
+<!--                        <p>4、居民的公物报修上传与后台维护功能</p>-->
+<!--                        <p>5、POI 框架工具实现excel、pdf 文档处理，数据导入导出。</p>-->
+<!--                        <p>6、ECharts 数据图表展示等。</p>-->
+<!--                    </li>-->
 <!--                    <li>-->
 <!--                        <div class="circle"></div>-->
 <!--                        <h4>驾校管理系统（2017-2018）</h4>-->
@@ -164,10 +186,11 @@
                         <p>背景：项目为督促小学生喝牛奶、<span class="bold">与自动售货机交互</span>、 采用云帐号、空中充值卡余额。 关注学生每日喝奶情况。 <span class="bold">多牛奶商家入驻</span></p>
                         <p>负责的模块有： </p>
                         <p>1、学生卡 扫二维码 + 密码绑定 、 卡充值</p>
-                        <p>2、统计学生刷卡情况。生成每日报表。<span class="bold">redis</span></p>
-                        <p>3、与售货机进行通讯 刷卡请求接口是否出货 <span class="bold">签名防篡改 </span></p>
-                        <p>4、小程序首页的牛奶促销售卖 <span class="bold">微信支付 </span></p>
-
+                        <p>2、用户身份鉴权，微信鉴权，openId关联免登</p>
+                        <p>3、与售货机进行通讯, 刷卡请求接口是否出货 <span class="bold"> 签名防篡改 </span></p>
+                        <p>4、小程序首页的牛奶促销售卖 <span class="bold"> 微信支付 </span> 负责订单生成，支付回调处理, 防重复回调</p>
+                        <p>5、统计学生刷卡情况。生成每日报表。<span class="bold">redis</span></p>
+                        <p>6、ECharts 数据图表展示等。</p>
                     </li>
 
                 </ul>
@@ -194,23 +217,23 @@
                         <img src="./img/layout.png" data-action="zoom"
                              width="300px">
                     </li>
-                    <li>
-                        <div class="circle"></div>
-                        <h4>
-                            <span>RBAC权限管理系统(大学)</span>
-                            <!--<a href="https://github.com/DIYgod/Amativeness" target="_blank"><i class="icon-link"></i>源代码</a>-->
-                            <!--<a href="https://www.anotherhome.net" target="_blank"><i class="icon-link"></i>Site</a>-->
-                            <!--<iframe src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=Amativeness&type=star&count=true"-->
-                                    <!--frameborder="0" scrolling="0" width="170px" height="20px"></iframe>-->
-                        </h4>
-                        <!--<p>-->
-                        <p>1、使用Redis缓存制缓存session对象。</p>
-                        <p>2、项目中使用SpringMVC中的拦截器的方式拦截所有请求。判断登录用户的权限进行权限拦截 </p>
-                        <p>3、使用mongodb 做日志的存放。</p>
-                        <!--</p>-->
-                        <img src="./img/权限管理系统.png" data-action="zoom"
-                             width="600px">
-                    </li>
+<!--                    <li>-->
+<!--                        <div class="circle"></div>-->
+<!--                        <h4>-->
+<!--                            <span>RBAC权限管理系统(大学)</span>-->
+<!--                            &lt;!&ndash;<a href="https://github.com/DIYgod/Amativeness" target="_blank"><i class="icon-link"></i>源代码</a>&ndash;&gt;-->
+<!--                            &lt;!&ndash;<a href="https://www.anotherhome.net" target="_blank"><i class="icon-link"></i>Site</a>&ndash;&gt;-->
+<!--                            &lt;!&ndash;<iframe src="https://ghbtns.com/github-btn.html?user=DIYgod&repo=Amativeness&type=star&count=true"&ndash;&gt;-->
+<!--                                    &lt;!&ndash;frameborder="0" scrolling="0" width="170px" height="20px"></iframe>&ndash;&gt;-->
+<!--                        </h4>-->
+<!--                        &lt;!&ndash;<p>&ndash;&gt;-->
+<!--                        <p>1、使用Redis缓存制缓存session对象。</p>-->
+<!--                        <p>2、项目中使用SpringMVC中的拦截器的方式拦截所有请求。判断登录用户的权限进行权限拦截 </p>-->
+<!--                        <p>3、使用mongodb 做日志的存放。</p>-->
+<!--                        &lt;!&ndash;</p>&ndash;&gt;-->
+<!--                        <img src="./img/权限管理系统.png" data-action="zoom"-->
+<!--                             width="600px">-->
+<!--                    </li>-->
 <!--                    <li>-->
 <!--                        <div class="circle"></div>-->
 <!--                        <h4>-->
@@ -275,11 +298,13 @@
                         <h4>Java</h4>
                         <p></p>
                         <p>1.熟练掌握JavaSE基础知识、看过HashMap、ArrayList源码。了解底层实现原理</p>
-                        <p>2.熟练掌握Eclipse、svn、git、Maven、docker等开发及版本控制工具，熟练掌握Java基础技术Jsp、Servlet、Jdbc，熟练掌握Web应用系统开发，具备的独立开发能力；</p>
+                        <p>2.熟练掌握IntelliJ IDEA、git、Maven、docker等开发及版本控制工具，
+                            熟练掌握Java基础技术Jsp、Servlet、Jdbc，熟练掌握Web应用系统开发，具备的独立开发能力；</p>
                         <p>3.熟悉使用MySQL、Redis、MongoDb数据库；</p>
-                        <p>4.熟练运用Spring、Mybatis、Springboot等开源框架，熟悉Spring的IOC、DI、AOP设计思想；</p>
-                        <p>5.熟练使用网络通讯协议，熟练使用json、xml通讯格式，熟悉常见消息中间件ActiveMQ、RocketMQ使用；</p>
+                        <p>4.熟练运用Spring、Mybatis、Springboot等开源框架，熟悉Spring的IOC、AOP设计思想；</p>
+                        <p>5.熟练使用网络通讯协议，熟练使用json、xml通讯格式</p>
                         <p>6.熟悉restfull API开发规范，熟悉三方授权OAuth协议、对接支付接口，熟悉微信开发；</p>
+                        <p>7.了解RabbitMQ、Rocketmq以及Kafka部署方法以及基本使用方法，浅入了解过源码</p>
                         <!--<p>7.了解过Zookeeper、集群、高可用、高并发解决方案，熟悉分布式常见解决方案（如：分布式job幂等性、session共享、分布式锁、分布式事物等）；</p>-->
                     </li>
                 </ul>
@@ -299,7 +324,6 @@
                     <li>
                         <p>爱猫、美剧、旅游爱好者</p>
                         <p>轻微强迫症，注重<a href="https://github.com/alibaba/p3c" target="_blank"> 阿里巴巴Java开发手册</a></p>
-                        <!--<p>猫咪铲屎官，拥有一只叫酸奶的美短猫，她的博客在<a href="https://suannai.cat/" target="_blank">这里</a></p>-->
                     </li>
                 </ul>
                 <h3>毕业于</h3>

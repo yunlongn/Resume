@@ -83,8 +83,7 @@
             <li class="someRight about" >
                 <dt><i class="icon-bookmark"></i>About. 自我介绍</dt>
                 <p >担任过项目开发组长，主导对接过许多知名金融机构，非常熟练项目部署项目以及业务开发。</p>
-                <p >现担任交易中心系统对接人，退款对接人，以及商城系统的需求开发。</p>
-
+                <p >现担任跨境电商的交易中心系统对接人，退款对接人，以及商城系统的需求开发。接触过海量订单高并发交易。</p>
                 <p >熟悉 Spring MVC、Spring、Mybatis-plus、Shiro 开发。 熟练使用三方授权OAuth协议、对接支付系统，微信开发文档 。</p>
                 <p >熟悉Centos系统。有自建 docker、Jenkins、Sonar 等平台搭建。有丰富的金融机构对接经验，交易对接经验。</p>
                 <p >浅入过  <span class="bold"> JVM调优</span>，能使用阿里 <span class="bold"> Arthas </span>解决生产问题</p>
@@ -121,7 +120,18 @@
                 <ul class="exp">
                     <li>
                         <div class="circle"></div>
-                        <h4>洋葱集团 - 商城支付中心（2021）</h4>
+                        <h4>洋葱集团 - 环球货源仓项目</h4>
+                        <p>项目是面对服务商孕育而生，提供给服务商进行大批量采购。系统基本功能与Omall商城类似</p>
+                        <p>项目采用 <span class="bold">SpringBoot </span>框架，Spring + SpringMVC + Mybatis为基础开发</p>
+                        <p>项目部署在k8s集群上，目前还是单体项目。多节点部署在k8s之上</p>
+                        <p>商城系统。系统有： 活动专场模块、商品模块、购物车、订单、支付、会员、售后等商城模块</p>
+                        <p>主要负责模块 有活动专场、售后、订单、支付等模块</p>
+                        <p>支付对接多个渠道开发。基于策略模式开发系统。抽象支付接口与售后接口。处理批量数据导入以及批量数据导出的需求开发</p>
+                        <p>负责系统维护以及需求迭代开发</p>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>洋葱集团 - 商城支付中心</h4>
                         <p>系统内部分多个项目，主要负责 <span class="bold"> 交易退款中心</span> 维护与开发新渠道对接</p>
                         <p>项目采用 <span class="bold">SpringBoot </span>框架，Spring + SpringMVC + Mybatis为基础开发</p>
                         <p>项目部署在k8s上，使用K8s的 configmap 配置中心。多个service多个nodes节点对外开放接口。</p>
@@ -131,11 +141,11 @@
                     </li>
                     <li>
                         <div class="circle"></div>
-                        <h4>洋葱集团 - 定时任务中心（2021）</h4>
+                        <h4>洋葱集团 - 定时任务中心</h4>
                         <p>定时任务基于 <span class="bold">Xxl-job</span> 的实现 Spring + SpringMVC + Mybatis为基础开发</p>
                         <p>主要负责新的定时器需求开发，以及旧的定时器任务的Bug修复 </p>
                         <p>项目主要用于商城数据的跑批。 以及一些每日任务的进行。</p>
-                        <p>需求基本 基于xxljob的分片机制。对整个月的数据进行分片到多台机器上分片执行提高跑批效率。 </p>
+                        <p>Xxljob的分片机制。对整个月的数据进行分片到多台机器上分片执行提高跑批效率。 </p>
                         <p>工作期间自己实现了 异步线程 分片处理List数据 AsyncShardingHandle，避免请求第三方数据的io阻塞导致任务跑批缓慢 </p>
                         <p>开源地址 https://search.maven.org/artifact/io.gitee.yunlongn/yunlongn-async </p>
                         <p></p>

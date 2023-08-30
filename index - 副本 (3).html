@@ -6,321 +6,9 @@
     <meta name="description" content="我是一个充满活力、对java由衷热爱、善于发现问题的Java工程师。我目前正在寻找java后端工程师岗位！">
     <meta name="keywords" content="yunlongn,java后端,工作,简历">
     <link rel="shortcut icon" href="favicon.ico">
-    <style>
-        .sidebar, .sidebar a, aside a {
-            color: #fff
-        }
-
-        .main-info dd a, .main-info dd span, .main-info dd strong, h3 img, h3 span, h4 a, h4 span, iframe {
-            vertical-align: middle
-        }
-
-        footer p {
-            text-align: center
-        }
-
-        * {
-            margin: 0;
-            padding: 0
-        }
-
-        body {
-            background: #eee;
-            font-family: PingFang TC, Avenir Next, Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, sans-serif;
-            min-width: 1080px
-        }
-
-        li, ul {
-            list-style: none
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        dd, dt, h1, h2, h3, h4, h5, p {
-            cursor: default
-        }
-
-        aside {
-            position: fixed;
-            right: 0;
-            top: 30%;
-            z-index: 2
-        }
-
-        aside li {
-            margin-bottom: 10px;
-            -webkit-border-radius: 10px 0 0 10px;
-            border-radius: 10px 0 0 10px;
-            background: #00A1D6;
-            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
-        }
-
-        aside a {
-            display: inline-block;
-            width: 80px;
-            height: 38px;
-            line-height: 38px;
-            padding-left: 10px
-        }
-
-        .container {
-            position: relative;
-            margin: 10px auto;
-            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            width: 1060px;
-            overflow: hidden;
-            -webkit-border-radius: 4px;
-            border-radius: 4px
-        }
-
-        .sidebar {
-            /*position: absolute;*/
-            /*top: 0;*/
-            /*bottom: 0;*/
-            /*width: 300px;*/
-            padding: 15px 15px 0px;
-            background: #29B6F6;
-            line-height: 1.5;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        .main, .skill, .skill-name, h4 {
-            position: relative
-        }
-
-        .title {
-            padding: 16px 50px;
-            border-bottom: 1px solid #fff;
-            color: #fff;
-        }
-
-        .title img {
-            display: block;
-            margin: 0 auto 15px;
-            width: 120px
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 400
-        }
-
-        h2 {
-            font-size: 14px
-        }
-        .side-info {
-            display: flex;
-            padding-top: 0 50px
-        }
-        .side-info li {
-            padding-top: 20px
-        }
-
-        .side-info dt {
-            font-size: 18px;
-            color: #fff;
-            line-height: 40px
-        }
-
-        .side-info dd {
-            font-size: 19px;
-            line-height: 20px
-        }
-
-        .side-info i {
-            margin-right: 3px
-        }
-        .about p{
-            margin-bottom: 17px;
-            margin-left: 50px;
-            margin-right: 50px;
-            font-size: 16px;
-        }
-        .someRight dd {
-            margin-left: 25px;
-            margin-top: 15px;
-        }
-
-        .skill-name {
-            width: 100px;
-            font-size: 14px;
-            display: inline-block;
-            left: 25px;
-            top: -3px
-        }
-
-        .skill-bar-wrap {
-            height: 17px;
-            width: 150px;
-            background: #00A1D6;
-            display: inline-block;
-            -webkit-border-radius: 20px;
-            border-radius: 20px
-        }
-
-        .skill-bar {
-            height: 17px;
-            background: #fff;
-            -webkit-border-radius: 20px 0 0 20px;
-            border-radius: 20px 0 0 20px
-        }
-
-        .note {
-            text-indent: 2em;
-            margin-top: 90px;
-            color: #01579B;
-            font-size: 18px
-        }
-
-        .main {
-            /*left: 300px;*/
-            /*width: 720px;*/
-            padding: 0px 20px 10px;
-            background: #fff;
-        }
-
-        .main a {
-            color: #f25d8e
-        }
-
-        .main-info > li {
-            padding-top: 5px
-        }
-
-        .main-info dt {
-            font-size: 24px;
-            color: #00A1D6;
-            line-height: 30px;
-            border-bottom: 1px solid #00A1D6;
-            margin: 0 0 15px -5px
-        }
-
-        .main-info dd {
-            font-size: 15px;
-            line-height: 27px;
-            color: #616161
-        }
-
-        h4, h5 {
-            color: #000
-        }
-
-        .main-info dd strong {
-            color: #000;
-            font-size: 16px
-        }
-
-        .github-button {
-            font-size: 0
-        }
-
-        iframe {
-            margin: 0 10px
-        }
-
-        h3 {
-            font-size: 19px;
-            color: #01579B;
-            margin: 0 0 15px 5px
-        }
-
-        h3 img {
-            height: 30px;
-            margin-right: 10px
-        }
-
-        h4 {
-            line-height: 30px;
-            font-size: 18px;
-            bottom: 3px
-        }
-
-        h5 {
-            clear: both;
-            font-size: 16px;
-            line-height: 25px
-        }
-
-        .fa {
-            margin-right: 2px
-        }
-
-        h4 a, h5 a {
-            font-size: 12px;
-            border: 1px solid #f25d8e;
-            padding: 1px 3px;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            margin-left: 7px
-        }
-
-        .circle {
-            height: 14px;
-            width: 14px;
-            -webkit-border-radius: 100%;
-            border-radius: 100%;
-            background: #00A1D6;
-            float: left;
-            position: absolute;
-            left: -28px;
-            top: 5px
-        }
-
-        .exp {
-            border-left: 2px solid #00A1D6;
-            margin-left: 15px
-        }
-
-        .exp p {
-            font-size: 15px;
-            color: #616161;
-            line-height: 23px;
-            margin-bottom: 5px
-        }
-
-        .exp > li {
-            position: relative;
-            top: -5px;
-            margin: 0 0 20px 20px
-        }
-
-        .exp img {
-            max-width: 100%
-        }
-
-        .exp ul > li {
-            margin: 0 0 12px
-        }
-
-        .efe .task4img img {
-            height: 97px;
-            width: inherit
-        }
-
-        footer {
-            margin: 30px 0 20px
-        }
-
-        footer p {
-            color: #616161;
-            font-size: 14px
-        }
-
-        footer a {
-            color: #f25d8e
-        }
-
-        .throb {
-            -webkit-animation: throb 1.33s ease-in-out infinite;
-            animation: throb 1.33s ease-in-out infinite
-        }
-
-    </style>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <link rel="stylesheet" href="dist/css/fontello.min.css">
+    <link rel="stylesheet" href="lib/zoom.css">
     <style>
         .bold{
             font-weight: bold;
@@ -335,11 +23,14 @@
             margin-bottom: 8px;
         }
     </style>
+    <link rel="stylesheet" href="src/css/style.scss">
 </head>
 <body>
 <div class="container">
     <div class="sidebar">
         <div class="title">
+            <!--<img src="https://avatars2.githubusercontent.com/u/38271111" data-action="zoom">-->
+            <!--<img src="https://avatars2.githubusercontent.com/u/38271111" data-action="zoom">-->
             <!--<img src="./img/lyl.jpg" data-action="zoom">-->
 <!--            <img src="./img/lyl.jpg" data-action="zoom">-->
             <h1>李云龙  -- Java 后端工程师</h1>
@@ -384,8 +75,8 @@
                 </li>
             </ul>
         </div>
-        <div style="  height: 20px;  font-size: 10px;    color: #fff;">
-        </div>
+<!--        <div style="  height: 20px;  font-size: 10px;    color: #fff;">-->
+<!--        </div>-->
     </div>
     <div class="main">
         <ul class="main-info">
@@ -394,7 +85,7 @@
                 <p >现负责任跨境电商的交易中心系统，商城系统的需求开发。接触过海量订单高并发交易。批量处理海量商品</p>
                 <p >曾担任过项目开发组长，主导对接过许多知名金融机构，非常熟悉<span class="bold">  Centos  </span>系统，进行项目部署项目以及业务开发。</p>
                 <p >担任 <span class="bold"> Apache ShenYu Commiter </span>，对 <span class="bold"> Shenyu </span>网关有深刻理解</p>
-                <p >深入研究过 <span class="bold"> Spring、 RocketMq 、 Dubbo、 Mybatis-Plus、Grpc</span>等框架 </p>
+                <p >深入研究过 <span class="bold"> Spring、 RocketMq 、 Dubbo、 Mybatis-Plus</span>等框架 </p>
                 <p >熟练运用  <span class="bold">Spring MVC、Spring、Mybatis-plus、Shiro</span> 开发。 熟练使用三方授权OAuth协议、对接支付系统，微信开发文档 。</p>
                 <p >熟悉Centos系统。有自建 <span class="bold">Docker、Jenkins、Sonar、Prometheus、Grafana</span> 等平台经验。</p>
                 <p >了解  <span class="bold"> JVM调优</span>，会使用各种工具, 例如 <span class="bold"> Arthas </span>解决生产问题</p>
@@ -593,18 +284,16 @@
                     <li>
                         <div class="circle"></div>
                         <h4>
-                            <span>Apache Shenyu （开源项目）（网关）</span>
+                            <span>Apache Shenyu （网关）</span>
                             <a href="https://github.com/apache/shenyu" target="_blank"><i class="icon-link"></i>源代码</a>
                         </h4>
                         <p>https://github.com/apache/shenyu</p>
-                        <p>Apache ShenYu 一款使用 Java Reactor 开发的响应式 API 网关。国内有几百家公司使用。是一个比较全面的业务网关</p>
+                        <p>担任开源社区 <span class="bold"> Commiter</span>， 负责了 shenyu-sdk代码开发，以及各种bug修复，非常熟悉项目代码</p>
+                        <p>Apache ShenYu 一款使用 Java Reactor 开发的响应式 API 网关。</p>
                         <p>以其高性能，动态灵活的流量管控，热插拔，易部署等特性，</p>
                         <p>开箱即用为用户提供整套全生命周期的 API 网关，包含 API 注册、服务代理、协议转换与 API 治理等功能。。</p>
-                        <p>担任开源社区 <span class="bold"> Committer</span> 负责了 shenyu-sdk代码开发，以及各种bug修复，非常熟悉项目代码</p>
-                        <p>给 Apache Shenyu 网关贡献 2w+ 代码,</p>
-                        <p>将网关的请求线程模型改造为Kafka的线程请求线程模型。增大网关的吞吐量</p>
                         <p>贡献 ShenyuSdk 代码, 提供给接入方使用。更方便的对接shenyu网关。使用sdk调用网关。其中包括网关的负载均衡，服务发现。服务注册的开发</p>
-                        <p>修复 Shenyu 网关上的 Sentinel 流量管控的bug修复。 完美实现shenyu对接的 sentinel 插件</p>
+                        <p>修复 Shenyu 网关上的 sentinel 流量管控的bug修复。 完美实现shenyu对接的 sentinel 插件</p>
                         <p>给 Shenyu 网关添加更多的集成测试, 给社区人员开发增加更多的兜底保障</p>
                         <p>重构 shenyu-plugin-logging 代码。 抽象代码模版。给后续的其他日志接入提供更好的接入环境</p>
                     </li>
@@ -749,6 +438,6 @@
     <p>by yunlongn. <a href="java后端工程师+李云龙+13539136450.pdf" target="_blank">PDF 下载</a>.
         最后更新于2022年02月02日</p>
 </footer>
-<!--<script src="lib/zoom.min.js"></script>-->
+<script src="lib/zoom.min.js"></script>
 </body>
 </html>

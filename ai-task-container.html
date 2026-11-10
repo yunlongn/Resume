@@ -1,79 +1,55 @@
 <li class="project-item">
     <div class="circle"></div>
-    <h4>Apache ShenYu - AI网关插件</h4>
+    <h4>Apache ShenYu - 高性能 API 网关</h4>
     <p>
-        <strong>插件介绍：</strong>
-        Apache ShenYu 是一款高性能、异步响应式、可扩展的 API 网关。
-        AI 插件生态提供统一的大语言模型（LLM）接入能力，
-        支持 Prompt 提示词管理、请求与响应转换、Token 用量管理及模型代理，
-        帮助业务系统通过统一网关接入不同的 AI 模型服务。
+        <strong>项目介绍：</strong>
+        Apache ShenYu 是一款基于 Java 的高性能、异步响应式 API 网关，
+        提供服务代理、协议转换、流量治理及插件化扩展能力。
+        参与 Apache ShenYu 开源项目开发，涉及网关插件扩展、
+        服务注册发现、配置数据同步及核心模块重构。
     </p>
-    <p><strong>项目亮点及技术贡献：</strong></p>
+    <p>
+        <strong>技术栈：</strong>
+        Java、Spring Boot、Spring WebFlux、Reactor、Redis、
+        Dubbo、gRPC、Zookeeper、Etcd、Consul、Eureka、
+        SPI、Maven。
+    </p>
+    <p><strong>核心贡献：</strong></p>
     <ul>
-        <li>
-            <strong>AI 模型统一接入：</strong>
-            基于 AiProxy 插件实现大语言模型统一代理接入，
-            通过 Selector、Rule 动态配置模型服务提供商、请求地址、
-            模型名称及 API Key，屏蔽不同模型服务商之间的接口差异，
-            降低业务系统对单一 AI 服务商的依赖。
-        </li>
+        <p>➢ <strong>AI 网关建设：</strong>
+            参与 Apache ShenYu AI 网关能力建设，围绕大模型统一接入与代理转发，完善 AI Proxy 相关能力，支持多模型服务接入及统一网关管理。
+        </p>
 
+        <p>➢ <strong>AI Token 管理：</strong>
+            参与 Token 用量统计与计算、Token 限流及用量管理能力建设，实现 AI 请求用量管控，为大模型 API 资源管理和成本控制提供支持。
+        </p>
         <li>
-            <strong>Prompt 提示词动态注入：</strong>
-            基于 AiPrompt 插件实现请求提示词增强能力，
-            支持在原始消息前后动态追加 Prompt 内容，
-            通过 preRole、postRole 配置消息角色，
-            将系统提示词、上下文指令等统一管理在网关层，
-            无需修改业务系统即可实现提示词策略调整。
+            <strong>网关插件开发：</strong>
+            参与 Signature 签名插件扩展、腾讯云 CLS 日志插件开发，
+            以及 Logging、Sentinel、Hystrix、Response Writer 等插件优化与问题修复。
         </li>
-
         <li>
-            <strong>AI 请求动态转换：</strong>
-            基于 AiRequestTransformer 插件实现请求转换能力，
-            支持通过配置规则对 HTTP 请求头、请求路径、查询参数、
-            JSON 请求体及表单数据进行转换，
-            解决不同 AI 模型接口之间的请求格式差异，
-            提高不同模型服务之间的兼容性。
+            <strong>流量治理：</strong>
+            参与 Divide 插件灰度发布能力完善，
+            修复 RateLimiter 限流插件并发处理问题，
+            涉及 Token Bucket 并发测试及流量控制机制。
         </li>
-
         <li>
-            <strong>AI 响应内容转换：</strong>
-            基于 AiResponseTransformer 插件实现上游响应内容转换，
-            根据配置的提示词和转换规则对响应数据进行处理，
-            支持响应结构适配、内容整理及不同客户端数据格式转换，
-            降低业务端对不同模型响应格式的适配成本。
+            <strong>服务注册与发现：</strong>
+            参与 Discovery、Spring Cloud 插件重构，
+            优化 Zookeeper、Etcd、Consul 等注册中心的数据同步机制，
+            修复 Eureka 实例查询及多 Selector 对接不同注册中心的问题。
         </li>
-
         <li>
-            <strong>Token 用量统计与限流：</strong>
-            基于 AiTokenLimiter 插件实现 AI 请求 Token 使用量限制，
-            结合 Redis 实现用量数据管理，
-            支持配置时间窗口、Token 阈值及请求维度等限流规则，
-            超出限制时通过 HTTP 429 返回限流响应，
-            帮助企业控制模型调用频率及 AI 服务使用成本。
+            <strong>配置同步与元数据管理：</strong>
+            参与 Admin 数据监听、注册实例持久化及同步逻辑重构，
+            处理 Selector、Rule、Metadata 缓存及数据一致性问题。
         </li>
-
         <li>
-            <strong>插件化执行链路：</strong>
-            将 AI 能力集成到 ShenYu 现有插件体系中，
-            利用网关 Selector、Rule 及插件执行机制实现灵活编排，
-            支持 Prompt 注入、Token 限流、模型代理及请求转换等能力协同工作，
-            提高 AI 网关功能的可扩展性和灵活性。
-        </li>
-
-        <li>
-            <strong>API Key 统一管理：</strong>
-            通过网关代理方式管理客户端与上游模型服务之间的 API Key，
-            将真实模型服务凭证保留在网关侧，
-            避免上游服务密钥直接暴露给客户端，
-            提升 AI 服务接入过程中的凭证管理能力。
+            <strong>协议与客户端扩展：</strong>
+            参与 Dubbo、gRPC、Tars 等模块优化，
+            参与 Java SDK、OpenFeign 集成及 WebClient 插件重构，
+            完善网关客户端接入与响应处理能力。
         </li>
     </ul>
-
-    <p>
-        <strong>插件地址：</strong>
-        <a href="https://shenyu.apache.org/" target="_blank" rel="noopener noreferrer">
-            https://shenyu.apache.org/zh/docs/plugin-center/ai/ai-prompt
-        </a>
-    </p>
 </li>

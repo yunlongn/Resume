@@ -100,23 +100,18 @@
                         <div class="circle"></div>
                         <p></p>
                         <p>➢ Java 基础扎实。并且有多语言基础。使用php、python、go等语言开发过项目需求</p>
-                        <p>➢ 熟练使用 Centos系统。有自建 <span class="bold">Docker、Jenkins、Sonar、Prometheus、Grafana</span> 等平台经验。</p>
                         <p>➢ 深入研究过 <span class="bold"> Spring、 RocketMq 、 Dubbo、 Mybatis-Plus、Grpc</span>等框架 </p>
                         <p>➢ 熟练运用 <span class="bold">Spring Cloud</span>、<span class="bold">Spring Cloud Alibaba</span>。熟悉微服务各个组件的以及具体功能。</p>
                         <p>➢ 熟练使用<span class="bold"> MySQL、MongoDB、oracle、pgsql、 OceanBase </span> 等数据库，具备 SQL 优化和数据库性能分析经验。</p>
                         <p>➢ 熟练使用 Redis 缓存中间件，熟悉 <span class="bold">RocketMQ 核心原理</span>及应用场景，具备Kafka、RabbitMQ 等消息队列的实际使用经验。</p>
                         <p>➢ 熟悉常用设计模式，包括单例模式、策略模式、观察者模式、装饰器模式等，能够结合实际业务场景进行合理应用。</p>
-                        <p>➢ 具备分布式系统及微服务架构开发经验，熟悉常见分布式技术解决方案，具备复杂业务系统设计与开发能力。</p>
-                        <p>➢ 熟悉 Linux 日常运维及服务器环境配置，熟练使用 <span class="bold">Jenkins、Docker</span>
-                            搭建自动化部署流程，具备独立完成商业项目部署及多云环境落地的能力。</p>
-                        <p>➢ 具备 <span class="bold">Kubernetes</span> 集群自主搭建经验，能够完成应用容器化及集群部署，曾在本地搭建
-                            KubeSphere 容器云平台。</p>
+                        <p>➢ 熟悉 Linux 日常运维及服务器环境配置，搭建自动化部署流程，具备独立完成商业项目部署及多云环境落地的能力。</p>
+                        <p>➢ 有自建 <span class="bold">Docker、Jenkins、Sonar、Prometheus、Grafana、Kubernetes</span> 等平台经验。</p>
                         <p>➢ 熟悉 Nginx、Tomcat 服务器技术，具备服务器部署、配置及性能优化经验。</p>
                         <p>➢ 熟悉 OAuth 第三方授权协议、微信开发及第三方支付接口对接，具备系统集成与业务接口开发经验。</p>
-                        <p>➢ 熟悉 HTML、CSS、JavaScript、jQuery，掌握 Vue.js、UniApp、Element UI 等前端技术及 Ajax
-                            网络请求机制。</p>
-                        <p>➢ 了解 <span class="bold"> JVM调优</span>，会使用各种工具, 例如 <span class="bold"> Arthas </span>解决生产问题
-                        </p>
+                        <p>➢ 熟悉 HTML、CSS、JavaScript、jQuery，掌握 Vue.js、UniApp、Element UI 等前端技术及 Ajax网络请求机制。</p>
+                        <p>➢ 了解 <span class="bold"> JVM调优</span>，会使用各种工具, 例如 <span class="bold"> Arthas </span>解决生产问题</p>
+                        <p>➢ 具备 <span class="bold">前后端全栈开发能力，不依赖 AI 编程工具</span>，能够独立阅读、理解及修改前端业务代码，熟悉 HTML、CSS、JavaScript、Vue 等前端技术，能够完成前后端接口联调、页面功能调整、业务问题排查及前端模块维护，具备独立解决前后端协同开发问题的能力。</p>
                         <p>➢ 具备良好的技术文档编写能力，能够独立完成技术方案整理、项目部署文档及相关开发文档。</p>
                     </li>
                 </ul>
@@ -127,7 +122,97 @@
                 <ul class="exp">
                     <li>
                         <div class="circle"></div>
-                        <h4>洋葱集团 - 商城支付中心</h4>
+                        <h4>黑镜 - AI 电商营销与智能商品视觉生成平台 （2025-至今）</h4>
+
+                        <p>
+                            <span class="bold">项目介绍：</span>
+                            面向电商店主与消费者的 AI 营销平台，集 AI 商品宣传图生成、营销任务发布、
+                            社交媒体推广及算力激励于一体。
+                            店主可通过充值算力使用 AI 生图服务，生成商品宣传图、模特展示图及营销推广素材，
+                            并在平台发布商品推广任务；消费者可在任务广场领取任务，
+                            将商品内容推广至小红书等社交平台，提交发布链接，经任务审核后获得算力奖励及商城优惠券。
+                            平台通过 AI 多模型统一接入、用户算力管理及营销任务激励机制，
+                            构建从商品素材制作到社交媒体推广的业务闭环。
+                        </p>
+
+                        <p>
+                            <span class="bold">技术架构：</span>
+                            Java、Spring Boot、LangChain4j、AI Agent、Skills、MCP、
+                            工厂模式、策略模式、Prompt Engineering、Tool Calling、
+                            ChatGPT Image、Midjourney、即梦、MySQL、Redis、OSS。
+                        </p>
+
+                        <p class="bold">核心工作与技术实现：</p>
+
+                        <p>
+                            1、<span class="bold">多模型统一接入与工厂架构：</span>
+                            对接 ChatGPT 生图、Midjourney（MJ）、即梦等多种 AI 图像生成模型，
+                            抽象统一的生图服务接口，基于工厂模式封装不同模型的调用实现，
+                            屏蔽各模型之间的接口差异、参数格式及结果处理逻辑。
+                            根据商品宣传图、模特展示图等不同业务场景动态选择对应模型，
+                            降低模型接入与后续扩展成本。
+                        </p>
+
+                        <p>
+                            2、<span class="bold">AI Agent 与 Skills 技能体系：</span>
+                            基于 LangChain4j 构建 AI 应用编排能力，
+                            设计并封装多种面向商品营销图片生成的 Skills，
+                            围绕时尚、潮流、治愈等不同视觉风格建立标准化生成模板。
+                            根据用户输入的风格期望及商品推广需求匹配对应 Skill，
+                            动态注入预设 Prompt、风格参数及画面要求，
+                            实现商品营销图片生成策略的模块化管理与复用。
+                        </p>
+
+                        <p>
+                            3、<span class="bold">MCP 工具生态集成：</span>
+                            引入 MCP 协议扩展 AI 工具调用能力，
+                            实现 Agent 与外部业务服务及图像处理工具之间的标准化交互，
+                            提升 AI 工具调用能力的扩展性与复用性。
+                        </p>
+
+                        <p>
+                            4、<span class="bold">AI 商品素材与图片处理：</span>
+                            设计产品参考图素材库及模特素材库，实现素材上传、分类管理、检索及存储。
+                            整合商品参考图与模特素材，构建 AI 模特换头及图片组合生成流程；
+                            支持店主上传原始商品图片，通过 AI 图像处理实现背景调整、画面优化及宣传场景生成，
+                            满足不同商品的营销素材设计需求。
+                        </p>
+
+                        <p>
+                            5、<span class="bold">用户算力账户与充值体系：</span>
+                            设计用户算力账户及额度管理机制，支持店主、消费者自主充值算力，
+                            实现算力充值、余额查询、额度校验、任务消耗及账户流水管理。
+                            建立 AI 生图 Token 预估、实际用量统计及算力换算逻辑，
+                            结合不同模型及生成参数进行用量核算，实现 AI 服务成本管理与算力扣减。
+                        </p>
+
+                        <p>
+                            6、<span class="bold">营销任务广场与任务流转：</span>
+                            设计营销任务发布及领取机制，支持店主创建商品推广任务，
+                            消费者在任务广场浏览并领取任务，
+                            将商品宣传内容发布至小红书等社交平台，
+                            提交平台发布地址作为任务完成凭证，
+                            实现任务发布、领取、提交及审核的完整业务流程。
+                        </p>
+
+                        <p>
+                            7、<span class="bold">算力奖励与优惠券激励体系：</span>
+                            设计任务完成奖励机制，任务审核通过后向消费者发放算力奖励及商城优惠券，
+                            打通任务状态与奖励结算流程；
+                            结合用户账户、算力流水及优惠券发放记录，
+                            实现营销激励的业务闭环。
+                        </p>
+
+                        <p>
+                            8、<span class="bold">AI 生图任务管理：</span>
+                            统一不同生图模型的任务提交、模型调用、执行状态跟踪、
+                            结果回传及异常处理流程，结合 OSS 实现生成图片存储与管理，
+                            打通用户需求输入、素材选择、Skills 匹配、模型调用到图片交付的完整链路。
+                        </p>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>洋葱集团 - 商城支付中心（2022-至今）</h4>
 
                         <p>
                             <span class="bold">项目介绍：</span>
@@ -211,7 +296,7 @@
                     <li id="ai-task-container"></li>
                     <li>
                         <div class="circle"></div>
-                        <h4>洋葱平台 - 综合运营管理系统</h4>
+                        <h4>洋葱平台 - 综合运营管理系统（2022-至今）</h4>
                         <p>
                             <span class="bold">项目介绍：</span>
                             洋葱平台核心综合运营后台，主要承载电商业务的日常运营及管理，
@@ -235,7 +320,6 @@
                             结合<span class="bold">事务管理、状态校验、任务取消及异常处理</span>，
                             提高复杂售后流程的可维护性及业务处理效率。
                         </p>
-
                         <p>
                             2、<span class="bold">异步消息与自动化任务处理：</span>
                             基于 <span class="bold">RocketMQ</span> 实现业务异步消息处理，
@@ -244,7 +328,6 @@
                             将部分非实时业务从主流程中解耦，
                             降低业务模块之间的直接依赖，提高系统处理能力。
                         </p>
-
                         <p>
                             3、<span class="bold">多系统接口集成与业务对接：</span>
                             参与平台内部及外部系统接口开发，
@@ -252,7 +335,6 @@
                             完成业务数据交互、接口参数转换、状态同步及异常处理，
                             实现不同业务系统之间的数据流转与业务协同。
                         </p>
-
                         <p>
                             4、<span class="bold">系统稳定性与数据一致性保障：</span>
                             根据业务场景使用 <span class="bold">Spring 事务管理、Redis 分布式锁、Shiro 权限控制</span>等技术，
@@ -271,7 +353,7 @@
                     <li style="height: 10px"></li>
                     <li >
                         <div class="circle"></div>
-                        <h4>定时任务调度平台（XXL-JOB）</h4>
+                        <h4>定时任务调度平台（XXL-JOB）（2022-至今）</h4>
 
                         <p>
                             <span class="bold">项目介绍：</span>
@@ -334,6 +416,117 @@
                                target="_blank">
                                 https://search.maven.org/artifact/io.gitee.yunlongn/yunlongn-async
                             </a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>IOT 物联网智能储钱罐项目（2019-2021）</h4>
+
+                        <p>
+                            <span class="bold">项目介绍：</span>
+                            一款集智能硬件、移动端应用及后台管理系统于一体的物联网项目，
+                            实现智能设备与云端平台的数据通信、设备状态管理、亲子互动及业务数据处理。
+                            项目与全国多家金融机构合作，提供标准化接口对接及本地化部署服务。
+                        </p>
+
+                        <p>
+                            <span class="bold">技术架构：</span>
+                            Spring Boot、Spring MVC、MyBatis-Plus、MySQL、Oracle、OceanBase、
+                            Redis、Ehcache、MQTT、EMQX、RocketMQ、Docker、Kubernetes、
+                            Jenkins、Sonar、Grafana、Prometheus。
+                        </p>
+
+                        <p class="bold">核心工作与技术实现：</p>
+
+                        <p>
+                            1、<span class="bold">核心业务开发：</span>
+                            参与项目一期从零到一建设，负责核心业务模块开发、
+                            RESTful API 接口设计与实现，参与业务需求分析及技术方案落地。
+                        </p>
+
+                        <p>
+                            2、<span class="bold">物联网设备通信与消息接入：</span>
+                            基于 MQTT 协议及 EMQX 消息服务构建设备与平台之间的通信链路，
+                            实现智能储钱罐设备数据上报、业务指令下发及设备状态交互；
+                            参与设备消息订阅、发布及消息处理逻辑开发，
+                            支撑移动端、后台服务与智能硬件之间的数据通信。
+                        </p>
+
+                        <p>
+                            3、<span class="bold">异步消息与业务解耦：</span>
+                            引入 RocketMQ 处理后台业务异步消息，
+                            将设备数据处理与业务逻辑进行解耦，
+                            支持消息异步消费、业务流程削峰及模块间通信，
+                            提升系统在设备消息集中上报场景下的处理能力。
+                        </p>
+
+                        <p>
+                            4、<span class="bold">接口安全体系建设：</span>
+                            负责接口报文加解密及签名验证机制的设计与实现。
+                            前端采用 SM4 加密、SM3 签名；
+                            后端通过 HttpInputMessage 扩展 POST 请求参数解密处理，
+                            通过 Filter 实现 GET 请求参数统一解密，
+                            建立接口传输安全机制。
+                        </p>
+
+                        <p>
+                            5、<span class="bold">系统安全与权限管理：</span>
+                            基于 RBAC 实现角色权限管理，
+                            采用 Token 机制进行用户身份认证，
+                            结合 SM4 与 Redis 实现 Token 安全存储及校验；
+                            对 GET、POST 请求参数进行统一过滤，
+                            增强系统对 XSS 等恶意输入的防护能力。
+                        </p>
+
+                        <p>
+                            6、<span class="bold">缓存优化与性能提升：</span>
+                            根据业务场景设计 Redis 与 Ehcache 多级缓存方案，
+                            Redis 用于用户数据及业务分析数据缓存，
+                            Ehcache 用于环境参数、字典数据缓存，
+                            减少数据库访问及设备数据查询压力。
+                            通过代码重构及性能优化，使系统整体性能提升约 30%。
+                        </p>
+
+                        <p>
+                            7、<span class="bold">多环境部署与项目交付：</span>
+                            负责全国多家金融机构的项目部署及上线实施，
+                            根据客户实际环境提供 Docker + Kubernetes、
+                            Linux 物理服务器、虚拟机等多种部署方案，
+                            完成环境适配、接口联调、上线验证及问题排查。
+                        </p>
+
+                        <p>
+                            8、<span class="bold">自动化部署与系统监控：</span>
+                            主导搭建 Jenkins 自动化部署方案，
+                            引入 Sonar 代码质量扫描机制；
+                            基于 Grafana、Prometheus 建立系统监控体系，
+                            实现服务运行状态、资源使用情况及业务指标监控，
+                            支持多地部署项目的运行状态跟踪及故障排查。
+                        </p>
+
+                        <p class="bold">项目职责与成果：</p>
+
+                        <p>
+                            1、作为项目核心研发人员，参与一期从零到一的建设，
+                            负责核心业务、物联网设备通信、接口安全及消息处理模块的研发与落地。
+                        </p>
+
+                        <p>
+                            2、作为项目上线实施及技术支持的主要负责人，
+                            对接全国多家金融机构，完成需求沟通、接口开发、
+                            联调测试、本地化部署及项目上线。
+                        </p>
+
+                        <p>
+                            3、针对不同金融机构的业务需求及系统环境，
+                            推动项目接口标准化、配置化及模块化，
+                            提高项目复用能力，逐步形成标准化交付方案。
+                        </p>
+
+                        <p>
+                            4、承担实施团队技术指导及培训工作，
+                            负责项目培训、技术文档及运维手册编写，
+                            远程协助实施人员解决网络环境、部署及生产运行问题。
                         </p>
                     </li>
                     <li style="height: 10px"></li>
